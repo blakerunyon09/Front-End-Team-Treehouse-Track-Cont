@@ -358,17 +358,12 @@ if (highNumber && lowNumber) {
 	console.log('You need to provide two number.')
 }
 
+//Functions
+/* Functions do not run unless they are called. */
 
-
-
-
-
-
-
-
-
-
-
+function alertRandom() {
+	const randomNumber = Math.floor ( Math.random() * 6 ) + 1;
+}
 
 
 
