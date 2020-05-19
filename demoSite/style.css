@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rebeccapurple;
+}
+
+#homeDiv {
+    margin: auto;
+    width: 50%;
+    background: #fb329a;
+    border-radius: 20px;
+    box-shadow: 8px 10px black;
+    max-width: 475px;
+    }
+
+#homeDiv p, #homeDiv h1 {
+    text-align: center;
+}
+
+#homeDiv h1 {
+    font-size: 3em;
+    margin: 20px 0 10px 0;
+    text-shadow: 1px 1px white;
+}
+
+#homeDiv p {
+    padding-top: 20px;
+}
+
+#homeNav {
+    padding-inline-start: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#homeNav li {
+    list-style-type: none;
+    padding: 20px 5%;
+    }
+
+#homeNav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
