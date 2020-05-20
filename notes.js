@@ -365,7 +365,7 @@ function alertRandom() {
 	const randomNumber = Math.floor ( Math.random() * 6 ) + 1;
 }
 
-
+//AJAX or Asynchronous JavaScript and XML or XMLhttpRequestobject
 
 
 
