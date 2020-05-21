@@ -367,7 +367,34 @@ function alertRandom() {
 
 //AJAX or Asynchronous JavaScript and XML or XMLhttpRequestobject
 
+/* Standard Request is 4 Parts
+1. Create XMLHttp Request Object
+2. Create a Callback Function
+3. Open request
+4. Send Request */
 
+var request = new XMLHttpRequest();
+request.onreadystatechange = function () {
+  if (request.readyState === 4) {
+    document.getElementById("footer").innerHTML = request.responseText;
+  }
+};
+request.open('GET', 'footer.html');
+request.send();
+
+// Checking HTTP Status
+
+if (request.readyState === 4 && xhr.status === 200) {}
+
+// Alerting Failure
+
+if (request.readyState === 4) {
+	if (xhr.status === 200) {
+	document.getElementById("footer").innerHTML = request.responseText;
+	}
+  } else if (xhr.status === 404) {
+	  // File not Found
+  } else ...
 
 
 
