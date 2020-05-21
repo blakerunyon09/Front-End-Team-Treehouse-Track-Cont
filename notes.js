@@ -396,5 +396,68 @@ if (request.readyState === 4) {
 	  // File not Found
   } else ...
 
+// JSON 
+/* Keys & Strings must have double quotes. */
 
+[
+	{
+		"name" : "Aimee",
+		"inoffice" : false
+	},
+	{
+		"name" : "Amit",
+		"inoffice" : true
+	}
+]
+// Parsing JSON
+
+/* Create XML Request */
+/* Create Ready State Callback */
+/* Open Request */
+/* Send Request */
+
+// Check Inside IF to see how to Parse JSON
+
+var xhr = new XMLHttpRequest(); 
+xhr.onreadystatechange = function () {
+	if(xhr.readyState === 4) {
+		var employees = JSON.parse(xhr.responseText);
+	}
+};
+xhr.open('GET', 'data/employees.json');
+xhr.send();
+
+//Processing JSON Data Example
+
+[
+	{
+		"name" : "Aimee",
+		"inoffice" : false
+	},
+	{
+		"name" : "Andrew",
+		"inoffice" : true
+	}
+]
+
+var xhr = new XMLHttpRequest(); 
+xhr.onreadystatechange = function () {
+	if(xhr.readyState === 4) {
+		var employees = JSON.parse(xhr.responseText);
+		var statusHTML = '<ul class="bulleted">';
+		for ( var i=0; i<employees.length; i ++) {
+			if (employees[i].inoffice === true) {
+				statusHTML += '<li class="in">;
+			} else {
+				statusHTML += '<li class="out">';
+			}
+			statusHTML += employees[i].name;
+			statusHTML += '</li>'
+		}
+		statusHTML += '</ul>'
+		document.getElementById('employeeList').innerHTML = statusHTML;
+	}
+};
+xhr.open('GET', 'data/employees.json');
+xhr.send();
 
