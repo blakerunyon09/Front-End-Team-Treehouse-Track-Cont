@@ -394,7 +394,7 @@ if (request.readyState === 4) {
 	}
   } else if (xhr.status === 404) {
 	  // File not Found
-  } else ...
+  } else {}
 
 // JSON 
 /* Keys & Strings must have double quotes. */
@@ -447,7 +447,7 @@ xhr.onreadystatechange = function () {
 		var statusHTML = '<ul class="bulleted">';
 		for ( var i=0; i<employees.length; i ++) {
 			if (employees[i].inoffice === true) {
-				statusHTML += '<li class="in">;
+				statusHTML += '<li class="in">';
 			} else {
 				statusHTML += '<li class="out">';
 			}
