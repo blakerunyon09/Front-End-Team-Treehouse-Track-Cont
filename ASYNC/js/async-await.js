@@ -25,3 +25,5 @@ btn.addEventListener('click', (event) => {
   event.target.textContent = "Loading...";
 
 });
+
+btn.addEventListener('click', () => getJSON(astrosUrl));
