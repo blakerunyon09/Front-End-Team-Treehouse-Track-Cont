@@ -38,7 +38,7 @@ function generateImage (data) {
 }
 
 function fetchBreedImage() {
-    const bree = select.value;
+    const breed = select.value;
     const img = card.querySelector('img');
     const p = card.querySelector('p');
 
