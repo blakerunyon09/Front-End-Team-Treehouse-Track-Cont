@@ -8,7 +8,7 @@ const form = document.querySelector('form');
 
 fetch('https://dog.ceo/api/breeds/list')
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => generateOptions(data.message))
 
 
 fetch('https://dog.ceo/api/breeds/image/random')
@@ -18,6 +18,13 @@ fetch('https://dog.ceo/api/breeds/image/random')
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
+
+function generateOptions(data) {
+    const options = data.map(item => `
+    <option value='${item}'></option>
+    `).join("");
+    select.innerHTML = options;
+}
 
 function generateImage (data) {
     const html = `
