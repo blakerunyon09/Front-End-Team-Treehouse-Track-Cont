@@ -461,5 +461,44 @@ xhr.onreadystatechange = function () {
 xhr.open('GET', 'data/employees.json');
 xhr.send();
 
-// ASYNC Programming
+// Object Oriented JavaScipt
 
+const ernie = {
+	animal: 'dog',
+	age: 1,
+	breed: 'pug',
+	bark: function(){
+		console.log('Woof!');
+	}
+}
+
+// Bracket Notation
+
+const fruits = ['apple', 'pear', 'peach'];
+fruitsLength = fruits.length;
+
+fruits[0];
+
+/* OR */
+
+console.log(ernie['age']);
+console.log(ernie['breed']);
+ernie['bark']();
+
+var prop = 'breed';
+ernie[prop];
+
+//Dot Example
+
+console.log(ernie.age);
+console.log(ernie.breed);
+ernie.bark();
+
+//Changing Object Properties
+
+ernie.age = 2;
+ernie['age'] = 2;
+
+// Adding a new property
+
+ernie.color = "Red";
