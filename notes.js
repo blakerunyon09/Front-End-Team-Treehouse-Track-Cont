@@ -40,13 +40,13 @@ var finalscore = score + 10;
 var message1 = "This"
 
 // 2. Variable Options
-/* Once you assign a value, it can not be overwritten. 
+/* Once you assign a value with CONST, it cann't be overwritten. 
 For instance, you can not += 5 to a const variable. */
 
 const message2 = "This";
 
 // 3. Variable Options
-/* You can override let but you can not override it. 
+/* You can manipulate LET but you can not override it. 
 For instance, += 5 to let will work, but let = "Message" will not. */
 
 let message3 = "This";
@@ -71,8 +71,8 @@ console.log( passphrase.length );
 "Good morning, students!".length;
 
 // Property
-/* In this case, "length" is the object of passphrase.
-In other words, length is a piece of information about the variable. */
+/* In this case, "length" is a property of passphrase.
+In other words, length is a piece of information about the object/variable. */
 
 console.log(passphrase.length);
 
